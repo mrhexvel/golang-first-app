@@ -12,7 +12,7 @@ CREATE TABLE
   IF NOT EXISTS todoapp.tasks (
     id SERIAL PRIMARY KEY,
     version BIGINT NOT NULL DEFAULT 1,
-    title VARCHAR(100) NOT NULL CHECK (char_length(title) BETWEEN 1 AND 100),
+    title VARCHAR(100) NOT NULL CHECK (char_length(title) BETWEEN 3 AND 100),
     description VARCHAR(1000) CHECK (char_length(description) BETWEEN 1 AND 1000),
     completed BOOLEAN NOT NULL,
     created_at TIMESTAMPTZ NOT NULL,
